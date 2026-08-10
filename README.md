@@ -1,28 +1,30 @@
 # Сергей Гончаров
 
-Занимаюсь интеграциями вокруг 1С, Python-сервисами и обработкой данных. Чаще всего это обмен между системами, внешние API, очереди, банковские контуры и инструменты для работы с BSL-кодом.
+Разрабатываю интеграции вокруг 1С и Python. Работаю с HTTP API, внешними
+сервисами, очередями, банковскими интеграциями и инструментами для анализа
+BSL-кода.
 
 ## Платёжный контур 1С
 
 ![Итог локального прогона сценариев сбоев](https://raw.githubusercontent.com/sergey-lastochkin/payment-integration-control-plane/main/failure_lab/runs/local-2026-08-10-01/report/failure-summary.svg)
 
-[Payment Integration Control Plane](https://github.com/sergey-lastochkin/payment-integration-control-plane) описывает путь заявки в УПП до банковского статуса. В локальном прогоне проверены 13 сценариев: повтор запроса, потеря ответа, двойной статус, повтор выписки и неоднозначная сверка.
+[Payment Integration Control Plane](https://github.com/sergey-lastochkin/payment-integration-control-plane) описывает путь заявки из 1С:УПП до банковского статуса. В локальном прогоне проверены 13 сценариев сбоев: повтор запроса, потеря ответа, двойной статус, повтор выписки и неоднозначная сверка.
 
-Одна операция не создаётся дважды, а спорная выписка остаётся в `manual_check`. Это подтверждено локально; тестовая УПП, n8n и банковский канал ещё не подключались. Для них подготовлен [чек-лист и журнал evidence](https://github.com/sergey-lastochkin/payment-integration-control-plane/tree/main/real_run).
+Повтор не создаёт две операции. Неоднозначная сверка требует ручной проверки. Тестовая УПП, n8n и банковский канал ещё не подключались; для них подготовлен [чек-лист и журнал прогона](https://github.com/sergey-lastochkin/payment-integration-control-plane/tree/main/real_run).
 
 [Код и результаты](https://github.com/sergey-lastochkin/payment-integration-control-plane) · [границы прогона](https://github.com/sergey-lastochkin/payment-integration-control-plane/blob/main/docs/operations.md)
 
 ## Поиск по BSL-коду
 
-![Recall@5 на детерминированных запросах](https://raw.githubusercontent.com/sergey-lastochkin/semantic-1c-code-search/main/studies/oss-bsl-corpus-2026-08-10/graphs/deterministic-recall-at-5.svg)
+![Локальный поиск по BSL-корпусу](https://raw.githubusercontent.com/sergey-lastochkin/semantic-1c-code-search/main/assets/search-example.png)
 
 [Semantic 1C Code Search](https://github.com/sergey-lastochkin/semantic-1c-code-search) проверен на 577 BSL-файлах и 156869 строках трёх открытых Apache-2.0 проектов. В корпусе выделено 7342 процедуры и функции.
 
-На 90 точных проверках лучший Recall@5 у BM25 – `0.855524`; RRF с локальными embeddings дал лучший MRR@10 `0.788470`. На 42 русских вопросах embeddings лучше BM25, но их разметка ещё `pending` и не выдаётся за окончательную метрику.
+На 90 точных проверках лучший Recall@5 у BM25: `0.855524`. RRF с локальными эмбеддингами дал лучший MRR@10: `0.788470`. На 42 русских вопросах эмбеддинги выше BM25, но их разметка ещё требует ручной проверки и не выдаётся за окончательную метрику.
 
 [Код](https://github.com/sergey-lastochkin/semantic-1c-code-search) · [результаты](https://github.com/sergey-lastochkin/semantic-1c-code-search/blob/main/studies/oss-bsl-corpus-2026-08-10/embedding-results.json) · [границы парсера](https://github.com/sergey-lastochkin/semantic-1c-code-search/blob/main/docs/parser-limits.md)
 
-## Process Mining
+## Анализ процессов
 
 ![Частые варианты и длинные ожидания BPI Challenge 2012](https://raw.githubusercontent.com/sergey-lastochkin/process-mining-1c/main/studies/bpi-challenge-2012-2026-08-10/graphs/variants-bottlenecks.svg)
 
@@ -44,8 +46,8 @@ BPI не является журналом 1С. В проекте отдельн
 
 ## Другие проекты
 
-- [Supplier Data Pipeline](https://github.com/sergey-lastochkin/supplier-data-pipeline) – проверка импорта на трёх открытых товарных каталогах: 36 записей получено, 26 прошли проверку схемы.
-- [Procurement Planning](https://github.com/sergey-lastochkin/procurement-planning) – правила потребности и ограничений поставщика; есть отдельная проверка публичного API ProZorro.
+- [Supplier Data Pipeline](https://github.com/sergey-lastochkin/supplier-data-pipeline): импорт из трёх открытых товарных каталогов, 36 записей получено, 26 прошли проверку схемы.
+- [Procurement Planning](https://github.com/sergey-lastochkin/procurement-planning): правила потребности и ограничений поставщика, результаты определения поставщика через публичный API ProZorro.
 
 ## Контакт
 
