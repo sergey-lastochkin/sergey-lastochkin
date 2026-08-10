@@ -20,7 +20,7 @@ BSL-кода.
 
 [Semantic 1C Code Search](https://github.com/sergey-lastochkin/semantic-1c-code-search) проверен на 577 BSL-файлах и 156869 строках трёх открытых Apache-2.0 проектов. В корпусе выделено 7342 процедуры и функции.
 
-На 90 точных проверках лучший Recall@5 у BM25: `0.855524`. RRF с локальными эмбеддингами дал лучший MRR@10: `0.788470`. На 42 русских вопросах эмбеддинги выше BM25, но их разметка ещё требует ручной проверки и не выдаётся за окончательную метрику.
+На 90 точных проверках лучший Recall@5 у BM25: `0.855524`. RRF с локальными эмбеддингами дал лучший MRR@10: `0.788470`. На точных запросах BM25 пока выигрывает. На 42 русских вопросах эмбеддинги находят нужный код чаще, но эту выборку я ещё проверяю вручную.
 
 [Код](https://github.com/sergey-lastochkin/semantic-1c-code-search) · [результаты](https://github.com/sergey-lastochkin/semantic-1c-code-search/blob/main/studies/oss-bsl-corpus-2026-08-10/embedding-results.json) · [границы парсера](https://github.com/sergey-lastochkin/semantic-1c-code-search/blob/main/docs/parser-limits.md)
 
@@ -28,9 +28,9 @@ BSL-кода.
 
 ![Частые варианты и длинные ожидания BPI Challenge 2012](https://raw.githubusercontent.com/sergey-lastochkin/process-mining-1c/main/studies/bpi-challenge-2012-2026-08-10/graphs/variants-bottlenecks.svg)
 
-[Process Mining и события 1С](https://github.com/sergey-lastochkin/process-mining-1c) считает варианты, ожидания и возвраты в журналах событий. Алгоритмы проверены на полном открытом BPI Challenge 2012: 262200 событий, 13087 случаев, 4366 вариантов.
+[Process Mining и события 1С](https://github.com/sergey-lastochkin/process-mining-1c) считает варианты, ожидания и возвраты в журналах событий. Алгоритмы проверены на полном открытом BPI Challenge 2012: 262 200 событий, 13 087 экземпляров процесса, 4 366 вариантов.
 
-BPI не является журналом 1С. В проекте отдельно описан контракт событий для выгрузки из 1С, поскольку одного журнала регистрации недостаточно для бизнес-интерпретации.
+BPI Challenge 2012 не является журналом 1С. В проекте отдельно описан формат событий для выгрузки из 1С. Публичный рейтинг длительных переходов строится только при не менее чем 100 наблюдениях; последовательность событий сама по себе не доказывает причины задержек.
 
 [Код](https://github.com/sergey-lastochkin/process-mining-1c) · [результаты](https://github.com/sergey-lastochkin/process-mining-1c/blob/main/studies/bpi-challenge-2012-2026-08-10/results.json) · [контракт событий](https://github.com/sergey-lastochkin/process-mining-1c/blob/main/onec_export/event-contract.md)
 
