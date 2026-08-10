@@ -1,74 +1,51 @@
 # Сергей Гончаров
 
-Интеграции и автоматизация вокруг 1С: Python-сервисы, API, очереди, внешние
-данные и инструменты для работы с BSL-кодом.
+Занимаюсь интеграциями вокруг 1С, Python-сервисами и обработкой данных. Чаще всего это обмен между системами, внешние API, очереди, банковские контуры и инструменты для работы с BSL-кодом.
 
 ## Платёжный контур 1С
 
-![Результат локального failure lab](https://raw.githubusercontent.com/sergey-lastochkin/payment-integration-control-plane/main/failure_lab/runs/local-2026-08-10-01/report/failure-summary.svg)
+![Итог локального прогона сценариев сбоев](https://raw.githubusercontent.com/sergey-lastochkin/payment-integration-control-plane/main/failure_lab/runs/local-2026-08-10-01/report/failure-summary.svg)
 
-[Payment Integration Control Plane](https://github.com/sergey-lastochkin/payment-integration-control-plane)
-разбирает путь от заявки в 1С:УПП до банковского статуса: business operation,
-повторная отправка, callback, сверка и ручное завершение спорной операции.
-Коммерческий контекст обезличен: производственная компания, УПП, несколько
-банковских каналов и n8n.
+[Payment Integration Control Plane](https://github.com/sergey-lastochkin/payment-integration-control-plane) описывает путь заявки в УПП до банковского статуса. В локальном прогоне проверены 13 сценариев: повтор запроса, потеря ответа, двойной статус, повтор выписки и неоднозначная сверка.
 
-**Проверено локально:** 13 сценариев сбоев завершились без двойной операции,
-включая callback до ответа отправителя, повтор статуса, потерю ответа и
-неоднозначную выписку. Это не подтверждение запуска в тестовой УПП, n8n или
-банковском канале: такие доказательства ещё не опубликованы.
+Одна операция не создаётся дважды, а спорная выписка остаётся в `manual_check`. Это подтверждено локально; тестовая УПП, n8n и банковский канал ещё не подключались. Для них подготовлен [чек-лист и журнал evidence](https://github.com/sergey-lastochkin/payment-integration-control-plane/tree/main/real_run).
 
-[Исходники](https://github.com/sergey-lastochkin/payment-integration-control-plane) · [Сценарии](https://github.com/sergey-lastochkin/payment-integration-control-plane/tree/main/failure_lab/runs/local-2026-08-10-01) · [Ограничения](https://github.com/sergey-lastochkin/payment-integration-control-plane/blob/main/docs/operations.md)
+[Код и результаты](https://github.com/sergey-lastochkin/payment-integration-control-plane) · [границы прогона](https://github.com/sergey-lastochkin/payment-integration-control-plane/blob/main/docs/operations.md)
 
-## Поиск и анализ связей в BSL-коде
+## Поиск по BSL-коду
 
-![Качество поиска в открытом BSL-корпусе](https://raw.githubusercontent.com/sergey-lastochkin/semantic-1c-code-search/main/studies/oss-bsl-corpus-2026-08-10/graphs/quality.svg)
+![Recall@5 на детерминированных запросах](https://raw.githubusercontent.com/sergey-lastochkin/semantic-1c-code-search/main/studies/oss-bsl-corpus-2026-08-10/graphs/deterministic-recall-at-5.svg)
 
-[1C Code Intelligence](https://github.com/sergey-lastochkin/semantic-1c-code-search)
-ищет процедуры, связи и ссылки на метаданные. Корпус собран из 577 BSL-файлов
-трёх открытых Apache-2.0 проектов: 156 869 строк и 7 342 выделенных процедуры
-и функции.
+[Semantic 1C Code Search](https://github.com/sergey-lastochkin/semantic-1c-code-search) проверен на 577 BSL-файлах и 156869 строках трёх открытых Apache-2.0 проектов. В корпусе выделено 7342 процедуры и функции.
 
-**Проверено:** BM25 на 90 детерминированных запросах дал Recall@5 `0.855524`,
-MRR@10 `0.740384` и p95 `3.926` мс. Локальный hash-vector baseline оказался
-хуже, что сохранено в результатах.
+На 90 точных проверках лучший Recall@5 у BM25 – `0.855524`; RRF с локальными embeddings дал лучший MRR@10 `0.788470`. На 42 русских вопросах embeddings лучше BM25, но их разметка ещё `pending` и не выдаётся за окончательную метрику.
 
-[Исходники](https://github.com/sergey-lastochkin/semantic-1c-code-search) · [Результаты](https://github.com/sergey-lastochkin/semantic-1c-code-search/blob/main/studies/oss-bsl-corpus-2026-08-10/results.json) · [Ограничения парсера](https://github.com/sergey-lastochkin/semantic-1c-code-search/blob/main/docs/parser-limits.md)
+[Код](https://github.com/sergey-lastochkin/semantic-1c-code-search) · [результаты](https://github.com/sergey-lastochkin/semantic-1c-code-search/blob/main/studies/oss-bsl-corpus-2026-08-10/embedding-results.json) · [границы парсера](https://github.com/sergey-lastochkin/semantic-1c-code-search/blob/main/docs/parser-limits.md)
 
-## Данные поставщиков
+## Process Mining
 
-![Результат обхода каталогов](https://raw.githubusercontent.com/sergey-lastochkin/supplier-data-pipeline/main/studies/openfacts-catalog-run-2026-08-10/graphs/source-metrics.svg)
+![Частые варианты и длинные ожидания BPI Challenge 2012](https://raw.githubusercontent.com/sergey-lastochkin/process-mining-1c/main/studies/bpi-challenge-2012-2026-08-10/graphs/variants-bottlenecks.svg)
 
-[Supplier Data Pipeline](https://github.com/sergey-lastochkin/supplier-data-pipeline)
-получает каталог, проверяет схему, сохраняет snapshot и дельты, а слабые
-совпадения отправляет на ручную проверку. Первый read-only run использует Open
-Food Facts, Open Beauty Facts и Open Pet Food Facts.
+[Process Mining и события 1С](https://github.com/sergey-lastochkin/process-mining-1c) считает варианты, ожидания и возвраты в журналах событий. Алгоритмы проверены на полном открытом BPI Challenge 2012: 262200 событий, 13087 случаев, 4366 вариантов.
 
-**Проверено:** из 36 полученных записей приняты 26; 10 без `product_name`
-отклонены до commit. Запуск занял 15.162 секунды и завершился без ошибок
-источников. Точный cross-source match в этой небольшой выборке не встретился.
+BPI не является журналом 1С. В проекте отдельно описан контракт событий для выгрузки из 1С, поскольку одного журнала регистрации недостаточно для бизнес-интерпретации.
 
-[Исходники](https://github.com/sergey-lastochkin/supplier-data-pipeline) · [Результаты](https://github.com/sergey-lastochkin/supplier-data-pipeline/blob/main/studies/openfacts-catalog-run-2026-08-10/results.json) · [Источники](https://github.com/sergey-lastochkin/supplier-data-pipeline/blob/main/docs/source-policy.md)
+[Код](https://github.com/sergey-lastochkin/process-mining-1c) · [результаты](https://github.com/sergey-lastochkin/process-mining-1c/blob/main/studies/bpi-challenge-2012-2026-08-10/results.json) · [контракт событий](https://github.com/sergey-lastochkin/process-mining-1c/blob/main/onec_export/event-contract.md)
 
-## Анализ процессов для будущей выгрузки 1С
+## Russian Markets Lab
 
-![Варианты и ожидания BPI Challenge 2012](https://raw.githubusercontent.com/sergey-lastochkin/process-mining-1c/main/studies/bpi-challenge-2012-2026-08-10/graphs/variants-bottlenecks.svg)
+![Панель исторических данных MOEX](https://raw.githubusercontent.com/sergey-lastochkin/russian-markets-lab/main/assets/readme_dashboard_overview.png)
 
-[Process Mining for 1C](https://github.com/sergey-lastochkin/process-mining-1c)
-задаёт контракт бизнес-событий для 1С и проверяет методы на полном открытом
-XES-журнале BPI Challenge 2012. Публичный журнал не выдаётся за журнал 1С,
-а самый частый вариант используется только как статистический baseline.
+[Russian Markets Lab](https://github.com/sergey-lastochkin/russian-markets-lab) собирает диагностики ликвидности, фьючерсного базиса и исторического риска по публичному MOEX ISS. Сохранённый набор содержит 6 таблиц и 260 строк.
 
-**Проверено:** 262 200 событий, 13 087 cases, 24 действия, 4 366 вариантов и
-125 переходов обработаны за 10.235 секунды. p95 длительности case составил
-31.343 суток; причина задержек по одному журналу не утверждается.
+На скриншоте и в данных указана дата `2026-06-19`. Это исторический снимок, а не текущая рыночная картина; брокерского исполнения и торговых рекомендаций в проекте нет.
 
-[Исходники](https://github.com/sergey-lastochkin/process-mining-1c) · [Результаты](https://github.com/sergey-lastochkin/process-mining-1c/blob/main/studies/bpi-challenge-2012-2026-08-10/results.json) · [Методика](https://github.com/sergey-lastochkin/process-mining-1c/blob/main/docs/study-design.md)
+[Код](https://github.com/sergey-lastochkin/russian-markets-lab) · [источники](https://github.com/sergey-lastochkin/russian-markets-lab/blob/main/docs/data_sources.md) · [ограничения](https://github.com/sergey-lastochkin/russian-markets-lab/blob/main/docs/limitations.md)
 
-## Дополнительно
+## Другие проекты
 
-- [Procurement Planning](https://github.com/sergey-lastochkin/procurement-planning) – правила потребности и ограничений поставщика; есть отдельный bounded snapshot публичного API ProZorro, который не подменяет supplier catalog.
-- [Russian Markets Lab](https://github.com/sergey-lastochkin/russian-markets-lab) – отдельный проект на публичных данных MOEX.
+- [Supplier Data Pipeline](https://github.com/sergey-lastochkin/supplier-data-pipeline) – проверка импорта на трёх открытых товарных каталогах: 36 записей получено, 26 прошли проверку схемы.
+- [Procurement Planning](https://github.com/sergey-lastochkin/procurement-planning) – правила потребности и ограничений поставщика; есть отдельная проверка публичного API ProZorro.
 
 ## Контакт
 
