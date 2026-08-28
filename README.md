@@ -1,54 +1,45 @@
-# Сергей Гончаров
+# Сергей Гончаров · Sergey Goncharov
 
-Разрабатываю интеграции вокруг 1С и Python. Работаю с HTTP API, внешними
-сервисами, очередями, банковскими интеграциями и инструментами для анализа
-BSL-кода.
+Разрабатываю open-source инструменты для поиска и анализа BSL-кода, оценки
+влияния изменений и надёжных интеграций вокруг 1С и Python.
 
-## Платёжный контур 1С
+Building practical open-source tools for 1C/BSL code search, change-impact
+analysis, and integration reliability.
 
-![Итог локального прогона сценариев сбоев](https://raw.githubusercontent.com/sergey-lastochkin/payment-integration-control-plane/main/failure_lab/runs/local-2026-08-10-01/report/failure-summary.svg)
+## Главный проект
 
-[Payment Integration Control Plane](https://github.com/sergey-lastochkin/payment-integration-control-plane) описывает путь заявки из 1С:УПП до банковского статуса. В локальном прогоне проверены 13 сценариев сбоев: повтор запроса, потеря ответа, двойной статус, повтор выписки и неоднозначная сверка.
+### [Semantic 1C Code Search](https://github.com/sergey-lastochkin/semantic-1c-code-search)
 
-Повтор не создаёт две операции. Неоднозначная сверка требует ручной проверки. Тестовая УПП, n8n и банковский канал ещё не подключались; для них подготовлен [чек-лист и журнал прогона](https://github.com/sergey-lastochkin/payment-integration-control-plane/tree/main/real_run).
+Локальный поиск по выгруженной конфигурации: BM25 для точных терминов и
+опциональные multilingual embeddings для вопросов на естественном языке.
+Показывает модуль и строки, не требует запущенной платформы 1С и не отправляет
+BSL-код во внешний API.
 
-[Код и результаты](https://github.com/sergey-lastochkin/payment-integration-control-plane) · [границы прогона](https://github.com/sergey-lastochkin/payment-integration-control-plane/blob/main/docs/operations.md)
+[![CI](https://github.com/sergey-lastochkin/semantic-1c-code-search/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/sergey-lastochkin/semantic-1c-code-search/actions/workflows/ci.yml)
+[![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-green.svg)](https://github.com/sergey-lastochkin/semantic-1c-code-search/blob/main/LICENSE)
 
-## Поиск по BSL-коду
+```bash
+code-search search /path/to/config-export "СформироватьНазначениеПлатежа"
+```
 
-![Локальный поиск по BSL-корпусу](https://raw.githubusercontent.com/sergey-lastochkin/semantic-1c-code-search/main/assets/search-example.png)
+Benchmark построен на 577 открытых BSL-файлах и 156 869 строках. Результаты,
+исходные revision и хэши опубликованы вместе с кодом.
 
-[Semantic 1C Code Search](https://github.com/sergey-lastochkin/semantic-1c-code-search) проверен на 577 BSL-файлах и 156869 строках трёх открытых Apache-2.0 проектов. В корпусе выделено 7342 процедуры и функции.
+## Ещё два инструмента для 1С-разработки
 
-На 90 точных проверках лучший Recall@5 у BM25: `0.855524`. RRF с локальными эмбеддингами дал лучший MRR@10: `0.788470`. На точных запросах BM25 пока выигрывает. На 42 русских вопросах эмбеддинги находят нужный код чаще, но эту выборку я ещё проверяю вручную.
+| Проект | Что решает |
+| --- | --- |
+| [BSL Dependency Analyzer](https://github.com/sergey-lastochkin/bsl-dependency-analyzer) | Строит статический граф зависимостей, blast radius и кандидатов для регрессионной проверки. |
+| [1C Integration Observability](https://github.com/sergey-lastochkin/integration-observability) | Связывает одну операцию между 1С, n8n и Python: traces, retries, DLQ, replay и группировка инцидентов. |
 
-[Код](https://github.com/sergey-lastochkin/semantic-1c-code-search) · [результаты](https://github.com/sergey-lastochkin/semantic-1c-code-search/blob/main/studies/oss-bsl-corpus-2026-08-10/embedding-results.json) · [границы парсера](https://github.com/sergey-lastochkin/semantic-1c-code-search/blob/main/docs/parser-limits.md)
+## Другие работы
 
-## Анализ процессов
+- [Process Mining и события 1С](https://github.com/sergey-lastochkin/process-mining-1c) — варианты процессов, ожидания и возвраты по журналам событий.
+- [Payment Integration Control Plane](https://github.com/sergey-lastochkin/payment-integration-control-plane) — повторные запросы, банковские статусы, сверка и восстановление после сбоев.
+- [Portfolio Risk API](https://github.com/sergey-lastochkin/portfolio-risk-api) — FastAPI-сервис для VaR/CVaR, drawdown, концентрации и stress scenarios.
 
-![Частые варианты и длинные ожидания BPI Challenge 2012](https://raw.githubusercontent.com/sergey-lastochkin/process-mining-1c/main/studies/bpi-challenge-2012-2026-08-10/graphs/variants-bottlenecks.svg)
+## Темы
 
-[Process Mining и события 1С](https://github.com/sergey-lastochkin/process-mining-1c) считает варианты, ожидания и возвраты в журналах событий. Алгоритмы проверены на полном открытом BPI Challenge 2012: 262 200 событий, 13 087 экземпляров процесса, 4 366 вариантов.
-
-BPI Challenge 2012 не является журналом 1С. В проекте отдельно описан формат событий для выгрузки из 1С. Публичный рейтинг длительных переходов строится только при не менее чем 100 наблюдениях; последовательность событий сама по себе не доказывает причины задержек.
-
-[Код](https://github.com/sergey-lastochkin/process-mining-1c) · [результаты](https://github.com/sergey-lastochkin/process-mining-1c/blob/main/studies/bpi-challenge-2012-2026-08-10/results.json) · [контракт событий](https://github.com/sergey-lastochkin/process-mining-1c/blob/main/onec_export/event-contract.md)
-
-## Russian Markets Lab
-
-![Панель исторических данных MOEX](https://raw.githubusercontent.com/sergey-lastochkin/russian-markets-lab/main/assets/readme_dashboard_overview.png)
-
-[Russian Markets Lab](https://github.com/sergey-lastochkin/russian-markets-lab) собирает диагностики ликвидности, фьючерсного базиса и исторического риска по публичному MOEX ISS. Сохранённый набор содержит 6 таблиц и 260 строк.
-
-На скриншоте и в данных указана дата `2026-06-19`. Это исторический снимок, а не текущая рыночная картина; брокерского исполнения и торговых рекомендаций в проекте нет.
-
-[Код](https://github.com/sergey-lastochkin/russian-markets-lab) · [источники](https://github.com/sergey-lastochkin/russian-markets-lab/blob/main/docs/data_sources.md) · [ограничения](https://github.com/sergey-lastochkin/russian-markets-lab/blob/main/docs/limitations.md)
-
-## Другие проекты
-
-- [Supplier Data Pipeline](https://github.com/sergey-lastochkin/supplier-data-pipeline): импорт из трёх открытых товарных каталогов, 36 записей получено, 26 прошли проверку схемы.
-- [Procurement Planning](https://github.com/sergey-lastochkin/procurement-planning): правила потребности и ограничений поставщика, результаты определения поставщика через публичный API ProZorro.
-
-## Контакт
+`1C` · `BSL` · `Python` · `code search` · `static analysis` · `integration reliability`
 
 Telegram: [@metaanswer](https://t.me/metaanswer)
