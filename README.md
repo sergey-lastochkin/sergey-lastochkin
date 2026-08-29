@@ -6,20 +6,6 @@
 Building practical open-source tools for 1C/BSL code search, change-impact
 analysis, and integration reliability.
 
-<p align="center">
-  <img alt="1C / BSL" src="https://img.shields.io/badge/1C%20%2F%20BSL-F4C430?style=for-the-badge&labelColor=1f2328">
-  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
-  <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white">
-  <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white">
-  <img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white">
-  <br>
-  <img alt="Static analysis" src="https://img.shields.io/badge/Static%20analysis-6E56CF?style=for-the-badge">
-  <img alt="Local-first" src="https://img.shields.io/badge/Local--first-2E3440?style=for-the-badge">
-  <img alt="Windows" src="https://img.shields.io/badge/Windows-0078D4?style=for-the-badge&logo=windows11&logoColor=white">
-  <img alt="macOS" src="https://img.shields.io/badge/macOS-000000?style=for-the-badge&logo=apple&logoColor=white">
-  <img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=111111">
-</p>
-
 ## Главный проект
 
 ### [Semantic 1C Code Search](https://github.com/sergey-lastochkin/semantic-1c-code-search)
