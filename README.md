@@ -25,13 +25,6 @@ code-search search /path/to/config-export "СформироватьНазнач�
 Benchmark построен на 577 открытых BSL-файлах и 156 869 строках. Результаты,
 исходные revision и хэши опубликованы вместе с кодом.
 
-## Ещё два инструмента для 1С-разработки
-
-| Проект | Что решает |
-| --- | --- |
-| [BSL Dependency Analyzer](https://github.com/sergey-lastochkin/bsl-dependency-analyzer) | Строит статический граф зависимостей, blast radius и кандидатов для регрессионной проверки. |
-| [1C Integration Observability](https://github.com/sergey-lastochkin/integration-observability) | Связывает одну операцию между 1С, n8n и Python: traces, retries, DLQ, replay и группировка инцидентов. |
-
 ## Другие работы
 
 - [Process Mining и события 1С](https://github.com/sergey-lastochkin/process-mining-1c) — варианты процессов, ожидания и возвраты по журналам событий.
