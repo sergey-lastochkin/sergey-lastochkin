@@ -18,12 +18,20 @@ BSL-код во внешний API.
 [![CI](https://github.com/sergey-lastochkin/semantic-1c-code-search/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/sergey-lastochkin/semantic-1c-code-search/actions/workflows/ci.yml)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-green.svg)](https://github.com/sergey-lastochkin/semantic-1c-code-search/blob/main/LICENSE)
 
+**[Попробовать v0.1.1 на Windows →](https://github.com/sergey-lastochkin/semantic-1c-code-search/releases/tag/v0.1.1)** —
+готовый wheel, PowerShell quick start и живое CLI-демо. CI: Windows + Ubuntu,
+Python 3.11/3.12.
+
 ```bash
 code-search search /path/to/config-export "СформироватьНазначениеПлатежа"
 ```
 
 Benchmark построен на 577 открытых BSL-файлах и 156 869 строках. Результаты,
 исходные revision и хэши опубликованы вместе с кодом.
+
+Есть сложный запрос по BSL?
+[Откройте issue](https://github.com/sergey-lastochkin/semantic-1c-code-search/issues/new)
+с минимальным воспроизводимым примером.
 
 ## Другие работы
 
