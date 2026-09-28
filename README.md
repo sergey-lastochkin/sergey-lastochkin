@@ -1,9 +1,9 @@
-# Сергей Гончаров · Sergey Goncharov
+# Сергей Гончаров · Sergey Goncharov // Сергей Ласточкин · Sergey Lastochkin
 
-Разрабатываю open-source инструменты для поиска и анализа BSL-кода, оценки
+Привет! Разрабатываю open-source инструменты для поиска и анализа BSL-кода, оценки
 влияния изменений и надёжных интеграций вокруг 1С и Python.
 
-Building practical open-source tools for 1C/BSL code search, change-impact
+Hey there! Building practical open-source tools for 1C/BSL code search, change-impact
 analysis, and integration reliability.
 
 ## Главный проект
