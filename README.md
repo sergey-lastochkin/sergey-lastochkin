@@ -32,7 +32,7 @@
 | [Russian Markets Lab](https://github.com/sergey-lastochkin/russian-markets-lab) | Конвейер и дашборд на публичных данных MOEX ISS. |
 
 Стек: 1С (BSL, HTTP-сервисы), Python, FastAPI, n8n, SQLite/PostgreSQL, Docker,
-GitHub Actions. Учусь на 1 курсе ВШЭ.
+GitHub Actions. 
 
 <details>
 <summary>English</summary>
