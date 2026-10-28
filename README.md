@@ -1,11 +1,11 @@
 # Сергей Ласточкин / Сергей Гончаров
 
-
 программист 1С, Санкт-Петербург. работаю один и удалённо, так что пишете вы сразу тому, кто будет делать. опишите задачу в двух-трёх предложениях в Telegram [t.me/metaanswer](https://t.me/metaanswer), отвечу, берусь или нет и как бы подошёл. сайт - [lastochkin1c.ru](https://lastochkin1c.ru).
 
 ## стек
 
-**1С**
+#### 1С
+
 ![1С:Предприятие](https://img.shields.io/badge/1%D0%A1%3A%D0%9F%D1%80%D0%B5%D0%B4%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5-FFCC00?style=for-the-badge&logoColor=black)
 ![БП 3.0](https://img.shields.io/badge/%D0%91%D0%9F%203.0-E6A800?style=for-the-badge)
 ![ЖКХ 3.0](https://img.shields.io/badge/%D0%96%D0%9A%D0%A5%203.0-D97706?style=for-the-badge)
@@ -13,7 +13,8 @@
 ![BSL](https://img.shields.io/badge/BSL-B91C1C?style=for-the-badge)
 ![HTTP-сервисы](https://img.shields.io/badge/HTTP--%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81%D1%8B-9F1239?style=for-the-badge)
 
-**языки**
+#### языки
+
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
@@ -24,7 +25,8 @@
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-663399?style=for-the-badge&logo=css&logoColor=white)
 
-**фреймворки и данные**
+#### фреймворки и данные
+
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![React Native](https://img.shields.io/badge/React%20Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Expo](https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white)
@@ -34,13 +36,15 @@
 ![Drizzle](https://img.shields.io/badge/Drizzle-C5F74F?style=for-the-badge&logo=drizzle&logoColor=black)
 ![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)
 
-**интеграции и автоматизация**
+#### интеграции и автоматизация
+
 ![n8n](https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)
 ![Wildberries](https://img.shields.io/badge/Wildberries-A20B8F?style=for-the-badge)
 ![МойСклад](https://img.shields.io/badge/%D0%9C%D0%BE%D0%B9%D0%A1%D0%BA%D0%BB%D0%B0%D0%B4-1E88E5?style=for-the-badge)
 ![Честный знак](https://img.shields.io/badge/%D0%A7%D0%B5%D1%81%D1%82%D0%BD%D1%8B%D0%B9%20%D0%B7%D0%BD%D0%B0%D0%BA-4B5563?style=for-the-badge)
 
-**инфраструктура**
+#### инфраструктура
+
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
@@ -48,10 +52,6 @@
 ![Xray](https://img.shields.io/badge/Xray%20%2F%20VLESS-6E40C9?style=for-the-badge)
 ![Claude Code](https://img.shields.io/badge/Claude%20Code-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-
-**связь**
-[![Telegram](https://img.shields.io/badge/@metaanswer-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/metaanswer)
-[![сайт](https://img.shields.io/badge/lastochkin1c.ru-0F172A?style=for-the-badge&logo=googlechrome&logoColor=white)](https://lastochkin1c.ru)
 
 ## чем занимаюсь
 
