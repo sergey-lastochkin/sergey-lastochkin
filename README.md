@@ -6,52 +6,51 @@
 
 #### 1С
 
-![1С:Предприятие](https://img.shields.io/badge/1%D0%A1%3A%D0%9F%D1%80%D0%B5%D0%B4%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5-FFCC00?style=for-the-badge&logoColor=black)
-![БП 3.0](https://img.shields.io/badge/%D0%91%D0%9F%203.0-E6A800?style=for-the-badge)
-![ЖКХ 3.0](https://img.shields.io/badge/%D0%96%D0%9A%D0%A5%203.0-D97706?style=for-the-badge)
-![ЗУП](https://img.shields.io/badge/%D0%97%D0%A3%D0%9F-C2410C?style=for-the-badge)
-![BSL](https://img.shields.io/badge/BSL-B91C1C?style=for-the-badge)
-![HTTP-сервисы](https://img.shields.io/badge/HTTP--%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81%D1%8B-9F1239?style=for-the-badge)
+![1С:Предприятие](https://img.shields.io/badge/%E2%80%A2-1%D0%A1%3A%D0%9F%D1%80%D0%B5%D0%B4%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5-161B22?style=for-the-badge&labelColor=FFCC00)
+![БП 3.0](https://img.shields.io/badge/%E2%80%A2-%D0%91%D0%9F%203.0-161B22?style=for-the-badge&labelColor=E6A800)
+![ЖКХ 3.0](https://img.shields.io/badge/%E2%80%A2-%D0%96%D0%9A%D0%A5%203.0-161B22?style=for-the-badge&labelColor=D97706)
+![ЗУП](https://img.shields.io/badge/%E2%80%A2-%D0%97%D0%A3%D0%9F-161B22?style=for-the-badge&labelColor=C2410C)
+![BSL](https://img.shields.io/badge/%E2%80%A2-BSL-161B22?style=for-the-badge&labelColor=B91C1C)
+![HTTP-сервисы](https://img.shields.io/badge/%E2%80%A2-HTTP--%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81%D1%8B-161B22?style=for-the-badge&labelColor=9F1239)
 
 #### языки
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Swift](https://img.shields.io/badge/Swift-F05138?style=for-the-badge&logo=swift&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=databricks&logoColor=white)
-![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
-![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS-663399?style=for-the-badge&logo=css&logoColor=white)
+![Python](https://img.shields.io/badge/Python-161B22?style=for-the-badge&logo=python&logoColor=3776AB)
+![TypeScript](https://img.shields.io/badge/TypeScript-161B22?style=for-the-badge&logo=typescript&logoColor=3178C6)
+![JavaScript](https://img.shields.io/badge/JavaScript-161B22?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![Swift](https://img.shields.io/badge/Swift-161B22?style=for-the-badge&logo=swift&logoColor=F05138)
+![SQL](https://img.shields.io/badge/SQL-161B22?style=for-the-badge&logo=databricks&logoColor=336791)
+![Bash](https://img.shields.io/badge/Bash-161B22?style=for-the-badge&logo=gnubash&logoColor=4EAA25)
+![PowerShell](https://img.shields.io/badge/PowerShell-161B22?style=for-the-badge&logo=powershell&logoColor=5391FE)
+![HTML/CSS](https://img.shields.io/badge/HTML%20%2F%20CSS-161B22?style=for-the-badge&logo=html5&logoColor=E34F26)
 
 #### фреймворки и данные
 
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![React Native](https://img.shields.io/badge/React%20Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Expo](https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white)
-![SwiftUI](https://img.shields.io/badge/SwiftUI-0D96F6?style=for-the-badge&logo=swift&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
-![Drizzle](https://img.shields.io/badge/Drizzle-C5F74F?style=for-the-badge&logo=drizzle&logoColor=black)
-![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-161B22?style=for-the-badge&logo=fastapi&logoColor=009688)
+![React Native](https://img.shields.io/badge/React%20Native-161B22?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Expo](https://img.shields.io/badge/Expo-161B22?style=for-the-badge&logo=expo&logoColor=white)
+![SwiftUI](https://img.shields.io/badge/SwiftUI-161B22?style=for-the-badge&logo=swift&logoColor=0D96F6)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-161B22?style=for-the-badge&logo=postgresql&logoColor=4169E1)
+![SQLite](https://img.shields.io/badge/SQLite-161B22?style=for-the-badge&logo=sqlite&logoColor=white)
+![Drizzle](https://img.shields.io/badge/Drizzle-161B22?style=for-the-badge&logo=drizzle&logoColor=C5F74F)
 
 #### интеграции и автоматизация
 
-![n8n](https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)
-![Wildberries](https://img.shields.io/badge/Wildberries-A20B8F?style=for-the-badge)
-![МойСклад](https://img.shields.io/badge/%D0%9C%D0%BE%D0%B9%D0%A1%D0%BA%D0%BB%D0%B0%D0%B4-1E88E5?style=for-the-badge)
-![Честный знак](https://img.shields.io/badge/%D0%A7%D0%B5%D1%81%D1%82%D0%BD%D1%8B%D0%B9%20%D0%B7%D0%BD%D0%B0%D0%BA-4B5563?style=for-the-badge)
+![n8n](https://img.shields.io/badge/n8n-161B22?style=for-the-badge&logo=n8n&logoColor=EA4B71)
+![Wildberries](https://img.shields.io/badge/%E2%80%A2-Wildberries-161B22?style=for-the-badge&labelColor=A20B8F)
+![МойСклад](https://img.shields.io/badge/%E2%80%A2-%D0%9C%D0%BE%D0%B9%D0%A1%D0%BA%D0%BB%D0%B0%D0%B4-161B22?style=for-the-badge&labelColor=1E88E5)
+![Честный знак](https://img.shields.io/badge/%E2%80%A2-%D0%A7%D0%B5%D1%81%D1%82%D0%BD%D1%8B%D0%B9%20%D0%B7%D0%BD%D0%B0%D0%BA-161B22?style=for-the-badge&labelColor=4B5563)
+![Playwright](https://img.shields.io/badge/Playwright-161B22?style=for-the-badge&logo=playwright&logoColor=2EAD33)
 
 #### инфраструктура
 
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![macOS](https://img.shields.io/badge/macOS-000000?style=for-the-badge&logo=apple&logoColor=white)
-![Xray](https://img.shields.io/badge/Xray%20%2F%20VLESS-6E40C9?style=for-the-badge)
-![Claude Code](https://img.shields.io/badge/Claude%20Code-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-161B22?style=for-the-badge&logo=docker&logoColor=2496ED)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-161B22?style=for-the-badge&logo=githubactions&logoColor=2088FF)
+![Linux](https://img.shields.io/badge/Linux-161B22?style=for-the-badge&logo=linux&logoColor=FCC624)
+![macOS](https://img.shields.io/badge/macOS-161B22?style=for-the-badge&logo=apple&logoColor=white)
+![Xray](https://img.shields.io/badge/%E2%80%A2-Xray%20%2F%20VLESS-161B22?style=for-the-badge&labelColor=6E40C9)
+![Claude Code](https://img.shields.io/badge/Claude%20Code-161B22?style=for-the-badge&logo=anthropic&logoColor=D97757)
+![Git](https://img.shields.io/badge/Git-161B22?style=for-the-badge&logo=git&logoColor=F05032)
 
 ## чем занимаюсь
 
